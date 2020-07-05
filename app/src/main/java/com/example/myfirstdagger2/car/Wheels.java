@@ -1,8 +1,4 @@
-package com.example.myfirstdagger2;
-
-import java.sql.Timestamp;
-
-import javax.inject.Inject;
+package com.example.myfirstdagger2.car;
 
 public class Wheels {
     private Rims mRims;

@@ -1,8 +1,10 @@
-package com.example.myfirstdagger2;
+package com.example.myfirstdagger2.dagger;
+
+import com.example.myfirstdagger2.car.Engine;
+import com.example.myfirstdagger2.car.PetrolEngine;
 
 import dagger.Binds;
 import dagger.Module;
-import dagger.Provides;
 
 @Module
 public abstract class PetrolEngineModule {
