@@ -1,4 +1,4 @@
- package com.example.myfirstdagger2;
+package com.example.myfirstdagger2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,15 +13,17 @@ import com.example.myfirstdagger2.dagger.DieselEngineModule;
 import javax.inject.Inject;
 
 
- public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     @Inject
     Car car;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CarComponent component= DaggerCarComponent.builder()
-                .dieselEngineModule(new DieselEngineModule(120))
+        CarComponent component = DaggerCarComponent.builder()
+                .horsePower(185)
+                .engineCapacity(1400)
                 .build();
         component.inject(this);
         car.drive();
