@@ -10,21 +10,20 @@ import dagger.Component;
 import dagger.Subcomponent;
 
 @PreActivity
-@Subcomponent( modules = {WheelModule.class, DieselEngineModule.class})
+@Subcomponent( modules = {WheelModule.class, PetrolEngineModule.class})
 public interface ActivityComponent {
     Car getCar();
 
     void inject(MainActivity mainActivity);
 
-//    @Component.Builder
-//    interface Builder {
-//        @BindsInstance
-//        Builder horsePower(@Named("horsePower") int horsePower);
-//
-//        @BindsInstance
-//        Builder engineCapacity(@Named("engineCapacity") int engineCapacity);
-//
-//        Builder appComponent(AppComponent appComponent);
-//        ActivityComponent build();
-//    }
+    @Subcomponent.Builder
+    interface Builder {
+        @BindsInstance
+        Builder horsePower(@Named("horsePower") int horsePower);
+
+        @BindsInstance
+        Builder engineCapacity(@Named("engineCapacity") int engineCapacity);
+
+        ActivityComponent build();
+    }
 }
