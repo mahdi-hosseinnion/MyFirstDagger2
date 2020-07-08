@@ -9,10 +9,16 @@ import dagger.Provides;
 
 @Module
 public class DriverModule {
+    String name;
+
+    public DriverModule(String name) {
+        this.name = name;
+    }
+
     @Provides
     @Singleton
-    static Driver provideDriver(){
-        return new Driver();
+    Driver provideDriver(){
+        return new Driver(name);
     }
 
 

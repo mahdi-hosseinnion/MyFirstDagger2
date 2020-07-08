@@ -5,6 +5,7 @@ import android.app.Application;
 import com.example.myfirstdagger2.dagger.ActivityComponent;
 import com.example.myfirstdagger2.dagger.AppComponent;
 import com.example.myfirstdagger2.dagger.DaggerAppComponent;
+import com.example.myfirstdagger2.dagger.DriverModule;
 
 
 public class ExampleApp extends Application {
@@ -12,7 +13,7 @@ public class ExampleApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        mAppComponent= DaggerAppComponent.create();
+        mAppComponent= DaggerAppComponent.factory().create(new DriverModule("mamad"));
 
     }
 

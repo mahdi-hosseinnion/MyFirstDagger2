@@ -25,6 +25,6 @@ public class Car {
     }
     public void drive(){
         mEngine.start();
-        Log.d(TAG, mDriver+" driving "+ this+"-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-");
+        Log.d(TAG, mDriver+" " +mDriver.name+" driving "+ this+"-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-");
     }
 }
