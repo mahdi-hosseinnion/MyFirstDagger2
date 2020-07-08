@@ -3,10 +3,8 @@ package com.example.myfirstdagger2.car;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-@Singleton
-public class Driver {
-    @Inject
-    public Driver(){
 
-    }
+public class Driver {
+    //we consider we cannot use this class
+
 }

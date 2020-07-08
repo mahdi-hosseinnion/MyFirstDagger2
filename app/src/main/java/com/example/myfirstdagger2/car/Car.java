@@ -2,8 +2,10 @@ package com.example.myfirstdagger2.car;
 
 import android.util.Log;
 
-import javax.inject.Inject;
+import com.example.myfirstdagger2.dagger.PreActivity;
 
+import javax.inject.Inject;
+@PreActivity
 public class Car {
     private static final String TAG = "Car";
     private Driver mDriver;
